@@ -1,4 +1,4 @@
-package com.junsik.lee;
+package com.junsik.lee.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
