@@ -53,7 +53,17 @@
 		</div>
 		<!-- /.row -->
 		
-		<br><br><br><br><br>
+		<br><br><br>
+
+		<table border="1">
+			<c:forEach var="person" items="${personList}">
+				<tr>
+					<td>${person.title}</td>
+				</tr>
+			</c:forEach>
+		</table>
+
+		<br><br>
 		<blockquote>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 			<footer>
