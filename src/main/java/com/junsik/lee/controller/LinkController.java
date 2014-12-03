@@ -1,7 +1,5 @@
 package com.junsik.lee.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -14,9 +12,8 @@ import org.springframework.util.StopWatch;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.junsik.lee.model.LinkModel;
+import com.junsik.lee.model.LinkVo;
 import com.junsik.lee.service.LinkService;
-
 
 @Controller
 public class LinkController {
@@ -31,7 +28,7 @@ public class LinkController {
 		
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start("search"); 
-		List<LinkModel> linkList = linkService.SearchList(search);
+		List<LinkVo> linkList = linkService.SearchList(search);
 		stopWatch.stop();
 		
 		model.addAttribute("linkList", linkList);

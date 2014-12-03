@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.junsik.lee.model.LinkModel;
+import com.junsik.lee.model.LinkVo;
 import com.junsik.lee.service.LinkService;
 
 /**
@@ -39,7 +39,7 @@ public class HomeController {
 		
 		String formattedDate = dateFormat.format(date);
 		
-		List<LinkModel> listLink= linkService.listLink();
+		List<LinkVo> listLink= linkService.listLink();
 		
 		model.addAttribute("serverTime", formattedDate );
 		model.addAttribute("personList", listLink); 
@@ -55,11 +55,11 @@ public class HomeController {
 
 		for(int i = 0; i < 100; i++)
 		{
-			LinkModel modelLink = new LinkModel();
+			LinkVo modelLink = new LinkVo();
 			modelLink.setTitle("aa" + i);
 			modelLink.setContents("contents");
 			modelLink.setUrl("url");
-			modelLink.setTag("contents");
+			modelLink.setTag("한글");
 			modelLink.setVisitor(i);
 			
 			linkService.addLink(modelLink);

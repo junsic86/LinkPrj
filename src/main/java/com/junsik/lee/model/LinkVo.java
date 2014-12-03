@@ -4,8 +4,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class LinkModel {
+public class LinkVo {
 	@Id
+	private String id;
 	private String time;
 	private String title;
 	private String contents;
@@ -48,5 +49,11 @@ public class LinkModel {
 	}
 	public void setVisitor(int visitor) {
 		this.visitor = visitor;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 }
