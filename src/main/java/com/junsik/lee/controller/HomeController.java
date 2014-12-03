@@ -2,6 +2,7 @@ package com.junsik.lee.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -29,30 +30,41 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/main.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		logger.info("Welcome home! The client locale is {}. 검색", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
 		String formattedDate = dateFormat.format(date);
 		
+		List<LinkModel> listLink= linkService.listLink();
+		
 		model.addAttribute("serverTime", formattedDate );
-		model.addAttribute("personList", linkService.listLink()); 
+		model.addAttribute("personList", listLink); 
+		
+		logger.info("size : " + listLink.size());
 		
 		return "home";
 	}
 	
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	@RequestMapping(value = "/add.do", method = RequestMethod.GET)
 	public String home2(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}. 2", locale);
-		
-		LinkModel modelLink = new LinkModel();
-		modelLink.setTitle("aa");
-		
-		linkService.addLink(modelLink);
+		logger.info("Welcome home! The client locale is {}. 추가", locale);
 
+		for(int i = 0; i < 100; i++)
+		{
+			LinkModel modelLink = new LinkModel();
+			modelLink.setTitle("aa" + i);
+			modelLink.setContents("contents");
+			modelLink.setUrl("url");
+			modelLink.setTag("contents");
+			modelLink.setVisitor(i);
+			
+			linkService.addLink(modelLink);
+		}
+		
 		return "home";
 	}
 }

@@ -59,6 +59,10 @@
 			<c:forEach var="person" items="${personList}">
 				<tr>
 					<td>${person.title}</td>
+					<td>${person.contents}</td>
+					<td>${person.tag}</td>
+					<td>${person.url}</td>
+					<td>${person.visitor}</td>
 				</tr>
 			</c:forEach>
 		</table>
