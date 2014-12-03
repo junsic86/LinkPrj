@@ -17,6 +17,11 @@
 	<!-- Bootstrap -->
 	<link href="/resources/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/resources/bootstrap-3.3.1/css/bootstrap-theme.min.css" rel="stylesheet">
+	
+	<style>
+		.list-group-item-heading2{color: #0000FF;}
+		.list-group-item-text2{color: #006400;}
+	</style>
 </head>
 <body>
 
@@ -67,8 +72,13 @@
 		<div class="list-group">
 			<c:forEach var="link2" items="${linkList}">
 			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">${link2.title}</h4>
-				<p class="list-group-item-text">${link2.contents}</p>
+				<span class="glyphicon glyphicon-file"></span> <span>${link2.title}</span><span class="badge">${link2.visitor}</span>
+				<p></p>
+				<div class="panel panel-default">
+					<div class="panel-body">${link2.contents} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</div>
+				</div>
+				<h6 class="list-group-item-heading2"><span class="glyphicon glyphicon-link"> Link : </span> ${link2.url}</h6>
+				<h6 class="list-group-item-text2"><span class="glyphicon glyphicon-tags"> Tag : </span> ${link2.tag}</h6>
 			</a>
 			</c:forEach>
 		</div>
