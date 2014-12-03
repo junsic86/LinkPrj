@@ -5,6 +5,9 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.BasicQuery;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -30,6 +33,19 @@ public class LinkService {
      
     public List<LinkModel> listLink() {
         return mongoTemplate.findAll(LinkModel.class, COLLECTION_NAME);
+    }
+    
+    public List<LinkModel> SearchList(String search) {
+    	Query query = new Query();
+    	Criteria title = Criteria.where("title").regex(search, "i");
+    	Criteria contents = Criteria.where("contents").regex(search, "i");
+    	Criteria tag = Criteria.where("tag").regex(search, "i");
+    	
+    	Criteria andOr = new Criteria().orOperator(title, contents, tag);
+    	
+    	query.addCriteria(andOr);
+    	
+    	return mongoTemplate.find(query, LinkModel.class, COLLECTION_NAME);
     }
      
     public void deleteLink(LinkModel link) {

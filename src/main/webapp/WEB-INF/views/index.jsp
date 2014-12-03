@@ -37,39 +37,25 @@
 			<h1>Hello, world!</h1>
 			<p>...</p>	
 		</div>
-		
+
 		<div class="row">
-			<!-- /.col-lg-6 -->
-			<div class="col-lg-6">
-				<div class="input-group">
-					<input type="text" class="form-control">
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Search</button>
-					</span>
+			<form role="form" action="search" method="get">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control" name="search"> <span
+							class="input-group-btn">
+							<button class="btn btn-default" type="submit">Search</button>
+						</span>
+
+					</div>
 				</div>
-				<!-- /input-group -->
-			</div>
-			<!-- /.col-lg-6 -->
+			</form>
 		</div>
-		<!-- /.row -->
 		
-		<br><br><br>
+		<br>
+		<br>
+		<br>
 		
-		<!--
-		<table border="1">
-			<c:forEach var="person" items="${personList}">
-				<tr>
-					<td>${person.title}</td>
-					<td>${person.contents}</td>
-					<td>${person.tag}</td>
-					<td>${person.url}</td>
-					<td>${person.visitor}</td>
-				</tr>
-			</c:forEach>
-		</table>
-		-->
-		
-		<br><br>
 		<blockquote>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 			<footer>

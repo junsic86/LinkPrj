@@ -38,37 +38,40 @@
 				</button>
 				<a class="navbar-brand" href="#">Brand</a>
 			</div>
+			
+			 <!-- Collect the nav links, forms, and other content for toggling -->
+			<!-- 
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<form class="navbar-form navbar-left" role="search" action="search" method="get">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search"
+							name="search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+
+			</div>
+			-->
 		</div>
 	</nav>
-	
 	<div class="container"> 
+		<div>
+			<form role="form" action="search" method="get">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control" name="search" value="${search}">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit">Search</button>
+						</span>
 	
-		<!-- 
-		<table border="1">
-			<c:forEach var="person" items="${linkList}">
-				<tr>
-					<td>${person.title}</td>
-					<td>${person.contents}</td>
-					<td>${person.tag}</td>
-					<td>${person.url}</td>
-					<td>${person.visitor}</td>
-				</tr>
-			</c:forEach>
-		</table>
-		-->
-		<!-- 
-		<c:forEach var="link2" items="${linkList}">
-			<blockquote>
-				<p>${link2.title}</p>
-				<p>${link2.contents}</p>
-				<p>${link2.tag}</p>
-				<p>${link2.url}</p>
-				<p>${link2.visitor}</p>
-			</blockquote>
-			<br>
-		</c:forEach>
-		 -->
-
+					</div>
+				</div>
+			</form>
+		</div>
+		<span class="glyphicon glyphicon-time"> 검색 시간 : ${time}초</span> 
+		<br>
+		<span class="glyphicon glyphicon-time"> 검색 개수 : ${linkListcount}개</span> 
+		<br><br>
 		<div class="list-group">
 			<c:forEach var="link2" items="${linkList}">
 			<a href="#" class="list-group-item">
