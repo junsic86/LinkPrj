@@ -1,6 +1,7 @@
 package com.junsik.lee.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -8,8 +9,11 @@ public class LinkVo {
 	@Id
 	private String id;
 	private String time;
+	@Indexed
 	private String title;
+	@Indexed
 	private String contents;
+	@Indexed
 	private String tag;
 	private String url;
 	private int visitor;

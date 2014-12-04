@@ -28,12 +28,16 @@ public class LinkController {
 		
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start("search"); 
-		List<LinkVo> linkList = linkService.SearchList(search);
+		List<LinkVo> linkList = linkService.SearchIndexList(search);
 		stopWatch.stop();
+		
+		int size = 0;
+		if(linkList != null)
+			size = linkList.size();
 		
 		model.addAttribute("linkList", linkList);
 		model.addAttribute("search", search);
-		model.addAttribute("linkListcount", linkList.size());
+		model.addAttribute("linkListcount", size);
 		model.addAttribute("time", stopWatch.getLastTaskTimeMillis()/1000.0);
 			
 		return "search";
