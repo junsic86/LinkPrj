@@ -31,42 +31,43 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Brand</a>
+				<a class="navbar-brand" href="#">PUGO</a>
 			</div>
 		</div>
 	</nav>
 	
-	<div class="container">
-		<div class="jumbotron">
-			<h1>Hello, world!</h1>
-			<p>...</p>	
-		</div>
-
-		<div class="row">
-			<form role="form" action="search" method="get">
-				<div class="col-lg-6">
-					<div class="input-group">
-						<input type="text" class="form-control" name="search"> <span
-							class="input-group-btn">
-							<button class="btn btn-default" type="submit">Search</button>
-						</span>
-
-					</div>
+	<div class="container">		
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Title</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Text input">
 				</div>
-			</form>
-		</div>
-		
-		<br>
-		<br>
-		<br>
-		
-		<blockquote>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-			<footer>
-				Someone famous in <cite title="Source Title"> Time ${serverTime} </cite>
-			</footer>
-		</blockquote>
-
+			</div>
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Content</label>
+				<div class="col-sm-10">
+					<textarea class="form-control" rows="5"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Tag</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Text input">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Url</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Text input">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-2">
+					<button type="submit" class="btn btn-primary">Submit aaa</button>
+				</div>
+			</div>
+		</form>
 	</div>
 
 <!-- 자바스크립트 -->

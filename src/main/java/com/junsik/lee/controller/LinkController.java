@@ -28,7 +28,7 @@ public class LinkController {
 		
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start("search"); 
-		List<LinkVo> linkList = linkService.SearchIndexList(search);
+		List<LinkVo> linkList = linkService.SearchList(search);
 		stopWatch.stop();
 		
 		int size = 0;
@@ -47,6 +47,12 @@ public class LinkController {
 	public String index(Locale locale, Model model) {
 		logger.info("url /main - {}", locale);		
 		return "index";
+	}
+	
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	public String add(Locale locale, Model model) {
+		logger.info("url /add - {}", locale);		
+		return "add";
 	}
 
 }

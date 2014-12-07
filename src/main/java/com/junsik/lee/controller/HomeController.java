@@ -56,7 +56,7 @@ public class HomeController {
 
 		Random rand = new Random();
 		
-		for(int i = 0; i < 1; i++)
+		for(int i = 0; i < 100; i++)
 		{
 			LinkVo modelLink = new LinkVo();
 			modelLink.setTitle("강아지" + i);
