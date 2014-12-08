@@ -1,22 +1,29 @@
 package com.junsik.lee.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.CompoundIndex;
+import org.springframework.data.mongodb.core.index.CompoundIndexes;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
+@CompoundIndexes({
+    @CompoundIndex(name = "keyword_inx", def = "{'keyword': 1}")
+})
 public class LinkVo {
 	@Id
 	private String id;
 	private String time;
-	@Indexed
 	private String title;
-	@Indexed
 	private String contents;
-	@Indexed
 	private String tag;
 	private String url;
 	private int visitor;
+	
+	@Indexed
+	private List<String> keyword;
 	
 	public String getTime() {
 		return time;
@@ -59,5 +66,11 @@ public class LinkVo {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public List<String> getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(List<String> keyword) {
+		this.keyword = keyword;
 	}
 }

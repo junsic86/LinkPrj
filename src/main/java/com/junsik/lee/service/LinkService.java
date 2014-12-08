@@ -29,8 +29,8 @@ import com.mongodb.DBObject;
 public class LinkService {
 	@Autowired
     private MongoTemplate mongoTemplate;
-	
-	public static final String COLLECTION_NAME = "Link";
+		
+	public static final String COLLECTION_NAME = "linkVo";
 	
 	public void addLink(LinkVo link) {
         if (!mongoTemplate.collectionExists(COLLECTION_NAME)) {
@@ -54,6 +54,18 @@ public class LinkService {
     	Criteria andOr = new Criteria().orOperator(title, contents, tag);
 
     	query.addCriteria(andOr);
+    	//query.skip(10);
+    	query.limit(1000);
+    	query.with(new Sort(Sort.Direction.DESC,"visitor"));
+    	
+    	return mongoTemplate.find(query, LinkVo.class, COLLECTION_NAME);
+    }
+    
+    public List<LinkVo> SearchKeyWordList(String search) {
+    	Query query = new Query();
+    	Criteria keyword = Criteria.where("keyword").is(search);
+    	query.addCriteria(keyword);
+    	
     	//query.skip(10);
     	query.limit(1000);
     	query.with(new Sort(Sort.Direction.DESC,"visitor"));

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.junsik.lee.model.LinkVo;
+import com.junsik.lee.service.KeywordsService;
 import com.junsik.lee.service.LinkService;
 
 @Controller
@@ -22,13 +23,16 @@ public class LinkController {
 	@Autowired
     private LinkService linkService;
 	
+	@Autowired
+	private KeywordsService keywordsService;
+	
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String search(String search, Model model) {
 		logger.info("url /search - {}", search);
 		
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start("search"); 
-		List<LinkVo> linkList = linkService.SearchList(search);
+		List<LinkVo> linkList = linkService.SearchKeyWordList(search);
 		stopWatch.stop();
 		
 		int size = 0;
@@ -56,12 +60,32 @@ public class LinkController {
 		logger.info("title - {}", title);	
 		logger.info("content - {}", content);	
 		logger.info("tag - {}", tag);	
-		logger.info("url - {}", url);	
+		logger.info("url - {}", url);
 		
 		if( null == title )
+		{
 			model.addAttribute("addok", false);
+			return "add";
+		}
 		else
+		{
 			model.addAttribute("addok", true);
+		}
+		
+		LinkVo linkVo = new LinkVo();
+		
+		linkVo.setTitle(title);
+		linkVo.setContents(content);
+		linkVo.setUrl(url);
+		linkVo.setTag(tag);
+		linkVo.setVisitor(0);
+		
+		String KeyWord = title + " " + content + " "  + tag;
+		
+		linkVo.setKeyword(keywordsService.getKeyWords(KeyWord));
+		
+		for(int i = 0; i < 1; i++)
+			linkService.addLink(linkVo);
 		
 		return "add";
 	}
