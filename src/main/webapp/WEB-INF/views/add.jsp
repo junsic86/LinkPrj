@@ -59,29 +59,29 @@
 	</nav>
 	
 	<div class="container">		
-		<form class="form-horizontal" role="form">
+		<form class="form-horizontal" role="form" action="add" method="get">
 			<div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label">Title</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" placeholder="Text input">
+					<input type="text" class="form-control" placeholder="Text input" name='title'>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label">Content</label>
 				<div class="col-sm-10">
-					<textarea class="form-control" rows="5"></textarea>
+					<textarea class="form-control" rows="5" name='content'></textarea>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label">Tag</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" placeholder="Text input">
+					<input type="text" class="form-control" placeholder="Text input" name='tag'>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label">Url</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" placeholder="Text input">
+					<input type="text" class="form-control" placeholder="Text input" name='url'>
 				</div>
 			</div>
 			<div class="form-group">
@@ -91,11 +91,41 @@
 			</div>
 		</form>
 	</div>
+	
+	
+	<div class="modal fade" id="myModal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title">추가 완료</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>정보 추가 완료</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal" id=button_ok>확인</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
 <!-- 자바스크립트 -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="/resources/jquery-1.11.1/jquery-1.11.1.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="/resources/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+		if( ${addok} === true )
+		{
+			$('#myModal').modal('show');
+			
+			$('#button_ok').click(function(){
+				var url = ".";    
+				$(location).attr('href',url);
+			});
+		}
+	</script>
 </body>
 </html>

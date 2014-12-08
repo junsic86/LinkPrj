@@ -50,8 +50,19 @@ public class LinkController {
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public String add(Locale locale, Model model) {
-		logger.info("url /add - {}", locale);		
+	public String add(String title, String content, String tag, String url, Model model) {
+		logger.info("url /add - {}");
+		
+		logger.info("title - {}", title);	
+		logger.info("content - {}", content);	
+		logger.info("tag - {}", tag);	
+		logger.info("url - {}", url);	
+		
+		if( null == title )
+			model.addAttribute("addok", false);
+		else
+			model.addAttribute("addok", true);
+		
 		return "add";
 	}
 
