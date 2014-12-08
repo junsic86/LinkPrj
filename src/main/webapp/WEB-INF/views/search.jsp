@@ -58,31 +58,39 @@
 			-->
 		</div>
 	</nav>
-	<div class="container"> 
-		<div>
-			<form role="form" action="search" method="get">
-				<div class="col-lg-6">
-					<div class="input-group">
-						<input type="text" class="form-control" name="search" value="${search}">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="submit">Search</button>
-						</span>
-	
+	<div class="container">
+
+		<div class="container-fluid">
+			<div class="row">
+				<form role="form" action="search" method="get">
+					<div class="col-xs-12">
+						<div class="input-group">
+							<input type="text" class="form-control" name="search" value="${search}"> <span class="input-group-btn">
+								<button class="btn btn-default" type="submit">Search</button>
+							</span>
+
+						</div>
 					</div>
+				</form>
+			</div>
+			<p>
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="list-unstyled">
+						<li><span class="glyphicon glyphicon-time"> 검색 시간 : ${time}초</span></li>
+						<li><span class="glyphicon glyphicon-time"> 검색 개수 : ${linkListcount}개</span></li>
+					</ul>
 				</div>
-			</form>
+			</div>
 		</div>
-		<span class="glyphicon glyphicon-time"> 검색 시간 : ${time}초</span> 
-		<br>
-		<span class="glyphicon glyphicon-time"> 검색 개수 : ${linkListcount}개</span> 
-		<br><br>
+		<p>		
 		<div class="list-group">
 			<c:forEach var="link2" items="${linkList}">
 			<a href="#" class="list-group-item">
 				<span class="glyphicon glyphicon-file"></span> <span>${link2.title}</span><span class="badge">${link2.visitor}</span>
 				<p></p>
 				<div class="panel panel-default">
-					<div class="panel-body">${link2.contents} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</div>
+					<div class="panel-body">${link2.contents}</div>
 				</div>
 				<h6 class="list-group-item-heading2"><span class="glyphicon glyphicon-link"> Link : </span> ${link2.url}</h6>
 				<h6 class="list-group-item-text2"><span class="glyphicon glyphicon-tags"> Tag : </span> ${link2.tag}</h6>
