@@ -20,9 +20,9 @@ public class KeywordsService {
 		
 		for( int i = 0; i < kl.size(); i++ ) {
 			Keyword kwrd = kl.get(i);
-			System.out.println(kwrd.getString() + "\t" + kwrd.getCnt());
-			
 			listkeywords.add( kwrd.getString());
+			
+			//System.out.println(kwrd.getString() + "\t" + kwrd.getCnt());
 		}
 		
 		return listkeywords;
