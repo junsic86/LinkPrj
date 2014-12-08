@@ -14,7 +14,7 @@ public class KeywordsService {
 	
 	public List<String> getKeyWords(String strValue) 
 	{
-		KeywordList kl = ke.extractKeyword(strValue, true);
+		KeywordList kl = ke.extractKeyword(strValue, false);
 	
 		List<String> listkeywords= new ArrayList<String>();
 		
