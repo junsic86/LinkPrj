@@ -15,8 +15,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	
 	<!-- Bootstrap -->
-	<link href="/resources/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/resources/bootstrap-3.3.1/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/resources/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet"> <!-- Sandstone -->
+	<!-- <link href="/resources/bootstrap-3.3.1/css/bootstrap-theme.min.css" rel="stylesheet"> -->
 </head>
 <body>
 

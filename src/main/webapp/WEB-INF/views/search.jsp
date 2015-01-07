@@ -19,8 +19,8 @@
 	<META http-equiv="Cache-Control" content="No-Cache"> 
 	
 	<!-- Bootstrap -->
-	<link href="/resources/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/resources/bootstrap-3.3.1/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/resources/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet"> <!-- Sandstone -->
+	<!-- <link href="/resources/bootstrap-3.3.1/css/bootstrap-theme.min.css" rel="stylesheet"> -->
 	
 	<style>
 		.list-group-item-heading2{color: #0000FF;}
