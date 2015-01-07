@@ -68,17 +68,15 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active" align="center">
-					<img src="/resources/img/mac-459196_1280.jpg" width="1024" height="200" alt="...">
-					<div class="carousel-caption">
-					
-					</div>
-				</div>
-				<div class="item" align="center">
-					<img src="/resources/img/seoul-410257_1280.jpg" width="1024" height="200" alt="...">
+					<img src="/resources/img/mac-459196_1280.jpg" alt="..." style="width: auto; height:400px;">
 					<div class="carousel-caption">...</div>
 				</div>
 				<div class="item" align="center">
-					<img src="/resources/img/workstation-405768_1280.jpg" width="1024" height="200" alt="...">
+					<img src="/resources/img/seoul-410257_1280.jpg" alt="..." style="width: auto; height:400px;">
+					<div class="carousel-caption">...</div>
+				</div>
+				<div class="item" align="center">
+					<img src="/resources/img/workstation-405768_1280.jpg" alt="..." style="width: auto; height:400px;">
 					<div class="carousel-caption">...</div>
 				</div>
 			</div>
@@ -105,19 +103,57 @@
 					</form>
 				</div>
 		</div>
+		<br>
+		<div class="media">
+			<a class="media-left" href="#"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width: 64px; height:64px;"/>
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">Media heading</h4>
+				...
+			</div>
+		</div>
+		<div class="media">
+			<a class="media-left" href="#"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width: 64px; height:64px;"/>
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">Media heading</h4>
+				...
+			</div>
+		</div>
+		<div class="media">
+			<a class="media-left" href="#"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width: 64px; height:64px;"/>
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">Media heading</h4>
+				...
+			</div>
+		</div>
+		<div class="media">
+			<a class="media-left" href="#"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width: 64px; height:64px;"/>
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">Media heading</h4>
+				...
+			</div>
+		</div>
 		
-		<br>
-		<br>
-		<br>
 		
+		<!-- 
 		<blockquote>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 			<footer>
 				Someone famous in <cite title="Source Title"> Time ${serverTime} </cite>
 			</footer>
 		</blockquote>
-
+	 	-->
+	 	<br>
+	 	<footer>
+        <p>&copy; Company 2014</p>
+      	</footer>
 	</div>
+	
+	
+	
 
 	<!-- 자바스크립트 -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
