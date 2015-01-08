@@ -16,12 +16,29 @@
 	
 	<!-- Bootstrap -->
 	<link href="/resources/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet"> <!-- Sandstone -->
-	<!-- <link href="/resources/bootstrap-3.3.1/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+		<!-- <link href="/resources/bootstrap-3.3.1/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+	
+	<style type="text/css">
+		.main_list {
+			padding: 10px;
+			border: 1px solid #C4C4C4;
+			box-shadow: 5px 5px 2px #888888;
+		}
+		.main_jumbotron {
+			background-image: url("/resources/img/mac-459196_1280.jpg");
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+		
+		body {
+			padding-top: 60px;
+			padding-bottom: 10px;
+		}
+	</style>
 </head>
 <body>
-	
 	<!-- 본문 시작 -->
-	<div class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="navbar-header">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -56,8 +73,15 @@
 				</ul>
 			</div>
 		</div>
-	</div>
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	</nav>
+	<div class="jumbotron main_jumbotron">
+      <div class="container">
+        <h2 style="color: #FFFFFF;">Hello, world!</h2>
+        <p style="color: #FFFFFF; height: 20%">Fusce congue ultricies est non dignissim. Vivamus imperdiet faucibus faucibus. Sed ac purus maximus, fringilla nunc vitae, varius nisl. Fusce pretium dolor sed aliquet vehicula. Sed vitae ipsum ac mi euismod scelerisque. Nam ac ipsum sed neque mollis lacinia et sit amet ligula. Integer non ipsum et purus convallis semper. Aenean porttitor metus sit amet nisi ornare sollicitudin.</p>
+        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+      </div>
+    </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="display: none">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -88,7 +112,6 @@
 				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span>
 			</a>
 	</div>
-	<br>
 	<div class="container">
 		<div class="row">
 				<div class="col-xs-12">
@@ -104,39 +127,40 @@
 				</div>
 		</div>
 		<br>
-		<div class="media">
-			<a class="media-left" href="#"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width: 64px; height:64px;"/>
+		<ul class="media-list">
+		<li class="media main_list">
+			<a class="media-left media-middle" href="#" style="width:64px; height:64px;"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width:64px; height:64px;"/>
+			</a>
+			<div class="media-body media-middle">
+				<h4 class="media-heading">Media heading</h4>
+				Nullam tincidunt in quam ut bibendum. Maecenas tortor sem, finibus non ante quis, vehicula molestie eros. Mauris euismod purus nibh, sit amet mattis ante venenatis quis. Sed et nisl in orci porta luctus. Aenean fermentum, diam eget ultricies aliquam, magna lacus luctus erat, vel aliquam purus libero eget lacus. Duis a elit dictum, dignissim ligula non, semper elit. Nulla magna sapien, consectetur non dui vel, hendrerit ultrices nunc. Aenean nunc erat, elementum eu malesuada in, dictum sed urna.
+			</div>
+		</li>
+		<li class="media main_list">
+			<a class="media-left media-middle" href="#" style="width:64px; height:64px;"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width:64px; height:64px;"/>
 			</a>
 			<div class="media-body">
 				<h4 class="media-heading">Media heading</h4>
-				...
+				Nulla ac urna ultricies, suscipit massa volutpat, consequat orci. Sed aliquam diam quis eros cursus ornare. Sed interdum commodo nisl, at venenatis ligula hendrerit sed. Nunc accumsan malesuada dui ut varius. Nulla sem arcu, convallis vel cursus a, porta a quam. Quisque nibh nulla, maximus vel eros sed, efficitur rutrum ipsum. Etiam rutrum, ante non vulputate sollicitudin, quam turpis vulputate tellus, sed hendrerit enim nisl sit amet dui. Pellentesque eu dolor pretium lacus pharetra auctor ut et dui. Nullam nec lobortis magna.
 			</div>
-		</div>
-		<div class="media">
-			<a class="media-left" href="#"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width: 64px; height:64px;"/>
+		</li>
+		<li class="media main_list">
+			<a class="media-left media-middle" href="#" style="width:64px; height:64px;"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width:64px; height:64px;"/>
 			</a>
 			<div class="media-body">
 				<h4 class="media-heading">Media heading</h4>
-				...
+				Nam dictum pellentesque euismod. Pellentesque iaculis eget mi vel sollicitudin. Nam dui eros, aliquet at metus in, sollicitudin laoreet ex. Sed vulputate nisi vel suscipit vulputate. Nullam ut justo id urna tristique rhoncus. Ut a egestas eros. Integer vitae felis orci.
 			</div>
-		</div>
-		<div class="media">
-			<a class="media-left" href="#"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width: 64px; height:64px;"/>
+		</li>
+		<li class="media main_list">
+			<a class="media-left media-middle" href="#" style="width:64px; height:64px;"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width:64px; height:64px;"/>
 			</a>
 			<div class="media-body">
 				<h4 class="media-heading">Media heading</h4>
-				...
+				Nulla feugiat, orci eget iaculis faucibus, diam nunc faucibus ligula, nec sodales sapien leo eu turpis. Vestibulum eget urna sapien. Curabitur nec iaculis nunc, sit amet pulvinar velit. Sed imperdiet metus orci, et congue libero facilisis ac. In viverra dignissim nisl vitae imperdiet. Fusce ullamcorper quam in tortor facilisis finibus. Vivamus aliquam ante eget vulputate mattis. Maecenas dignissim tincidunt leo, id ullamcorper nunc ultrices ac.
 			</div>
-		</div>
-		<div class="media">
-			<a class="media-left" href="#"> <img src="/resources/img/seoul-410257_1280.jpg" alt="..." class="img-thumbnail" style="width: 64px; height:64px;"/>
-			</a>
-			<div class="media-body">
-				<h4 class="media-heading">Media heading</h4>
-				...
-			</div>
-		</div>
-		
+		</li>
+		</ul>
 		
 		<!-- 
 		<blockquote>
@@ -148,13 +172,11 @@
 	 	-->
 	 	<br>
 	 	<footer>
-        <p>&copy; Company 2014</p>
+        <p align="center"><span class="label label-info">&copy; Company 2014 m.ppugo.com</span></p>
       	</footer>
 	</div>
 	
 	
-	
-
 	<!-- 자바스크립트 -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="/resources/jquery-1.11.1/jquery-1.11.1.min.js"></script>
